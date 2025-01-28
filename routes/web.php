@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\QRController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/qr', [QRController::class, 'generarQR']);
